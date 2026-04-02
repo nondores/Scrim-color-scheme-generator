@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- css -->
+     <link rel="stylesheet" href="styles.css">
+
+    <title>COLOR SCHEME GENERATOR</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="head">SCHEMECOLOR 
+            <span class="author">@AlfieMillieTails</span>
+        </h1>
+        </header>
+
+        <form class="controls" id="controls" aria-label="Color scheme generator">
+
+            <div class="control-group">
+
+                <label for="color-picker">Pick a color: </label>
+                <input 
+                    type="color" 
+                    id="color-picker" 
+                    value="#ff0000"
+                    aria-describedby="color-help"
+                >
+                <span class="sr-only" id="color-help">
+                    Choose a color for the color scheme.
+                </span>
+                
+            </div>
+
+            <div class="control-group">
+                <label for="color-box">Scheme: </label>
+                <select name="color-box" id="color-box">
+                    <option value="monochrome">Monochrome</option>
+                    <option value="monochrome-dark">Monochrome Dark</option>
+                    <option value="monochrome-light">Monochrome Light</option>
+                    <option value="analogic">Analogic</option>
+                    <option value="complement">Complement</option>
+                    <option value="analogic-complement">Analogic Complement</option>
+                    <option value="triad">Triad</option>
+                </select>
+            </div>
+            
+            <button 
+                id="get-color-btn" 
+                class="get-color-btn"
+                aria-label="Generate color scheme"
+            >
+                Get color scheme
+            </button>
+
+        </form>
+
+        <main>
+            <section 
+                class="color-scheme" 
+                id="color-scheme"
+                role="region"
+                aria-live="polite"
+                aria-label="Generated color scheme"
+            >
+                <!-- color scheme will be here -->
+            </section>
+        </main>
+    </div>
+    <div id="toast" class="toast">Copied!</div>
+    
+    <script src="script.js" type="module"></script>
+</body>
+</html>
