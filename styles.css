@@ -259,18 +259,44 @@ select:hover {
 
 /* phone */
 @media (max-width: 480px) {
+    
     .controls {
-        grid-template-columns: 1fr;
-        gap: 0.5em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6em;
+
+        padding: 0.8em;
     }
 
     .control-group {
+        width: 100%;
+        display: flex;
         justify-content: space-between;
+        align-items: center;
+    }
+
+    select {
+        width: 100%;
     }
 
     .get-color-btn {
         width: 100%;
+        margin-top: 0.3em;
     }
+
+    input[type="color"] {
+        margin-left: auto;
+    }
+
+    .color-scheme {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.6em;
+    }
+
+    .color {
+        height: 7em;
+    }
+
 }
 
 /* tablet */
